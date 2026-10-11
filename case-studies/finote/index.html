@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF2MZT30Q0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JF2MZT30Q0');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Finote — Designing a 0-1 RBAC ERP for Architecture Firms - Amit Thakur</title>
+  <meta
+    name="description"
+    content="How Amit Thakur designed Finote from scratch — an RBAC-driven ERP that gave architects, finance, site engineers, clients, and developers one shared view of every project."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../styles/case-study.css?v=5" />
+  <link rel="stylesheet" href="../../styles/clean.css?v=5" />
+</head>
+<body class="case-study-page">
+  <div class="case-page">
+
+    <div class="topbar">
+      <a class="back-link" href="../../index.html">
+        <span>&larr;</span>
+        <span>Back to portfolio</span>
+      </a>
+      <div class="top-actions">
+        <a class="back-link-secondary" href="../../index.html#work">View all work</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-intro">
+        <p class="eyebrow cs-fade-in">Case Study 01</p>
+        <h1 class="cs-fade-in cs-fade-in-d1">Finote: an RBAC-driven ERP for Architect and construction firms</h1>
+        <p class="hero-copy cs-fade-in cs-fade-in-d2">
+          I designed and shipped Finote from scratch — an RBAC-driven ERP that replaced fragmented spreadsheets, files, and mail threads with a single shared record for projects, billing, certificates, drawings, site reports, and tasks. Every role — architect, finance, site engineer, client, developer — reads the same project, at the same time, with the same numbers.
+        </p>
+        <div class="hero-meta cs-fade-in cs-fade-in-d3">
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">0–1 Product</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">B2B ERP</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">RBAC</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">Multi-Project Operations</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">Built End-to-End</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="content">
+      <section class="section" id="sec-problem">
+        <h2 class="section-title">The problem</h2>
+        <p>
+          Architecture and construction firms ran their operations the way the industry always had — Excel
+          sheets for projects, scattered files for drawings, and mail threads to coordinate between the
+          office, accounts, and the site. Each role held its own slice of truth, and the architect-owner
+          had no single view of their own business.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <span>The structural pain</span>
+            <strong>One layout → many buildings → many developers → many fee tracks. Tracking who owed what against which slab meant a separate spreadsheet per relationship.</strong>
+          </div>
+          <div class="fact">
+            <span>Money lagging the build</span>
+            <strong>Site progress happened daily; demand letters, fee calculations, tax splits, and invoices were reconstructed weeks later by accounts re-typing numbers that already existed.</strong>
+          </div>
+        </div>
+        <p>
+          The design challenge: make money a consequence of operations — not a separate workflow that
+          has to be reconciled.
+        </p>
+      </section>
+
+      <section class="section" id="sec-solved">
+        <h2 class="section-title">How we knew we solved it</h2>
+        <p>
+          Four signals I used to declare victory:
+        </p>
+        <ul class="content-list">
+          <li>
+            <strong>Activation gate</strong>
+            <span>A project cannot go live until fees are added. Finance is the source of truth on day one; no project drifts into setup limbo while accounts catches up.</span>
+          </li>
+          <li>
+            <strong>One record, five views</strong>
+            <span>Admin, site engineer, accounts, client, and developer each log in and see only what is relevant to them — against the same underlying record.</span>
+          </li>
+          <li>
+            <strong>Money tracks the build, automatically</strong>
+            <span>Site progress + fee chart routes to a demand letter. Payment + tax split routes to an invoice. No manual re-entry anywhere in the chain.</span>
+          </li>
+          <li>
+            <strong>Approval-driven edits</strong>
+            <span>When any employee edits a record, it doesn't go live — it raises a request on the admin's dashboard. Admin approves or rejects before the record updates. Trust without lockdown.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-what-i-did">
+        <h2 class="section-title">What I did</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">01</div>
+            <div class="step-body">
+              <h3>Discovery across firms</h3>
+              <p>Shadowed architects, accounts, and site engineers to map who touches what — and where the records broke.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">02</div>
+            <div class="step-body">
+              <h3>Domain modeling</h3>
+              <p>Designed the layout → building → wing hierarchy so one project could honestly hold many developers on the same piece of land.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">03</div>
+            <div class="step-body">
+              <h3>RBAC by design</h3>
+              <p>Built the role matrix around real jobs-to-be-done: admin, site engineer, accounts, client, developer.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">04</div>
+            <div class="step-body">
+              <h3>Approval workflow as a first-class feature</h3>
+              <p>Every employee edit becomes a request; only admins can approve. Everyone sees proposed changes before they go live.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">05</div>
+            <div class="step-body">
+              <h3>Operational dashboard</h3>
+              <p>Scoped the home screen around KPIs each role cares about; live activity stream is the notification layer.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">06</div>
+            <div class="step-body">
+              <h3>Lifecycle wiring</h3>
+              <p>Connected site report → demand → payment log → invoice so finance never re-typed what the field team already wrote.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-rich-text" id="sec-shipped">
+        <h2 class="section-title">What I shipped</h2>
+
+        <h3 class="section-subtitle">1. Role-aware operations dashboard</h3>
+        <p>
+          One home for every role. KPI tiles are scoped to what the signed-in user cares about; the live activity stream surfaces approvals, overdue fees, and pending site visits without leaving the page. Every notification is actionable — an edit request is one click from approval or rejection.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote dashboard 2.png" alt="Finote operations dashboard with the live approval and notification panel open" />
+          <figcaption>Live activity panel: approvals, overdue fees, and pending site visits — all actionable without leaving the dashboard.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">2. Clients, applicants, developers, groups — one directory</h3>
+        <p>
+          A single directory holds everyone the firm bills or builds for. Adding a developer here is what makes them mappable to a specific building inside a specific layout.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote client.png" alt="Finote clients module with four entity cards" />
+          <figcaption>Clients module: clients, applicants, developers, and groups — four entity types managed from one place.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">3. Projects with layout → building hierarchy</h3>
+        <p>
+          One project holds many buildings; many buildings can hold many developers. The list view filters by Job No., VP No., Village, Phase; the layout summary collapses scheme, billing company, team, and location into one decision-ready screen.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote Project 1.png" alt="Finote project list with filters and statuses" />
+          <figcaption>Project list: multi-facet filters (Job No., VP No., Village, Phase, Sector, Building No., Wing) with active/inactive status at a glance.</figcaption>
+        </figure>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote project 2.png" alt="Finote layout summary screen" />
+          <figcaption>Layout Summary: scheme, billing company, people, and location collapsed into one decision-ready screen.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">4. Bills &amp; payments — the lifecycle of money</h3>
+        <p>
+          Calculate Fees on onboarding — the project goes live only when fees exist. Raise Demand routes the right fee to the right construction stage (slab, RCC, brickwork). Log Payment records cheque or RTGS with the tax split; the invoice is generated the same day.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote payment & bill 1.png" alt="Finote payment & bills home" />
+          <figcaption>Payment & Bills home: four actions grouped by where in the lifecycle the team is stuck.</figcaption>
+        </figure>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote payment & bill 2.png" alt="Finote raise demand stage modal" />
+          <figcaption>Raise Demand: picking the construction stage routes the right fee ledger entry automatically.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">5. Certificates</h3>
+        <p>
+          Filter the project, generate the certificate. One record per project keeps issuance auditable and downloadable.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote certificate.png" alt="Finote certificates project picker" />
+          <figcaption>Certificates: project picker before generating the official record.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">6. Site reports and drawings</h3>
+        <p>
+          Site engineers upload progress per stage. Drawings and certificates sit alongside the same project record so anyone on the team — admin, client, developer — can pull the latest set without chasing the architect.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote site report.png" alt="Finote site report status history" />
+          <figcaption>Site Report status history — every stage change is timestamped and attributable to a person.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">7. Task manager — accountability, not noise</h3>
+        <p>
+          Completion rate, project-level throughput, employee-level efficiency. Admins see who is overloaded; employees see their own queue; nobody has to ask where a task is stuck.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote task 1.png" alt="Finote task manager overview with completion rate and project metrics" />
+          <figcaption>Task Manager Overview: completion rate and per-project throughput, overdue surfaced first.</figcaption>
+        </figure>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote task 2.png" alt="Finote my tasks list with approval needed" />
+          <figcaption>My Tasks: pending approvals, due dates, and who created them — the day-to-day queue.</figcaption>
+        </figure>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Finote task 3.png" alt="Finote employee level metrics with efficiency scores" />
+          <figcaption>Employee Metrics: per-role throughput (Draughtsman, Team Head, Accounts) with efficiency scores.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="sec-impact">
+        <h2 class="section-title">Impact</h2>
+        <ul class="impact-points">
+          <li><strong>Replaced fragmented tracking</strong> with one RBAC system where architects, finance, site engineers, clients, and developers all read from the same record.</li>
+          <li><strong>Made finance a consequence of operations</strong> — projects go live only when fees exist; demand letters raise themselves off site progress; invoices generate off payments the same day.</li>
+          <li><strong>Built trust into the workflow</strong> — every edit is a request, every request is visible; admins approve, the rest of the org sees approved truth.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-tools">
+        <h2 class="section-title">Tools and methods</h2>
+        <div class="case-chip-list">
+          <span class="chip">0–1 Product Strategy</span>
+          <span class="chip">RBAC / Permissions Design</span>
+          <span class="chip">Approval Workflow Design</span>
+          <span class="chip">UI/UX Design</span>
+          <span class="chip">Product Logic &amp; System Flows</span>
+          <span class="chip">B2B ERP</span>
+          <span class="chip">Cross-Functional Discovery</span>
+          <span class="chip">Wireframing &amp; Prototyping</span>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script defer src="../../scripts/case-study.js?v=5"></script>
+</body>
+</html>

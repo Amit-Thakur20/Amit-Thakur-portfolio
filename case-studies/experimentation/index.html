@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF2MZT30Q0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JF2MZT30Q0');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Scaling Content Operations: Designing an AI-Powered CMS - Amit Thakur</title>
+  <meta
+    name="description"
+    content="How Amit Thakur took a 15-20 minute manual recipe workflow to a governed AI-powered CMS with split-compose ingestion, human-in-the-loop validation, a database copilot, and media and subscription modules."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../styles/case-study.css?v=3" />
+  <link rel="stylesheet" href="../../styles/clean.css?v=3" />
+</head>
+<body class="case-study-page">
+  <div class="case-page">
+
+    <div class="topbar">
+      <a class="back-link" href="../../index.html">
+        <span>&larr;</span>
+        <span>Back to portfolio</span>
+      </a>
+      <div class="top-actions">
+        <a class="back-link-secondary" href="../../index.html#work">View all work</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-intro">
+        <p class="eyebrow cs-fade-in">Case Study 02</p>
+        <h1 class="cs-fade-in cs-fade-in-d1">Scaling content operations with an AI-powered CMS</h1>
+        <p class="hero-copy cs-fade-in cs-fade-in-d2">
+          I took a manual 15&ndash;20 minute recipe workflow from zero to a governed AI pipeline: an
+          AI split-compose engine, human validation gates, and a database copilot. The copy-paste drag
+          is gone &mdash; what remains is deliberate verification, so master data never slips.
+        </p>
+        <div class="hero-meta cs-fade-in cs-fade-in-d3">
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">0&rarr;1 Build</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">AI + Human-in-the-Loop</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">System Architecture</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">Content Ops at Scale</span>
+          </div>
+        </div>
+      </div>
+      <figure class="launch-photo hero-banner cs-fade-in cs-fade-in-d3">
+        <img src="../../img/cms git style tile.jpeg?v=2" alt="Foodxp CMS recipe coverage dashboard showing the cuisine and meal coverage heatmap" />
+      </figure>
+    </section>
+
+    <main class="content">
+      <section class="section" id="sec-problem">
+        <h2 class="section-title">The problem</h2>
+        <p>
+          Recipes are dense, nested documents &mdash; ingredients, measurements, techniques, timings &mdash; and every value maps to a strict database taxonomy.
+        </p>
+        <p>
+          Publishing one meant hand-reading a source document and pasting values into a dozen-plus CMS fields: <strong>15&ndash;20 minutes per recipe</strong>, and a hard ceiling on how fast content could scale.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <span>Velocity</span>
+            <strong>The manual copy-paste set the platform's content time-to-market.</strong>
+          </div>
+          <div class="fact">
+            <span>Integrity</span>
+            <strong>Hand-mapping free text into taxonomies like Diets or Cuisines broke search and filters on the consumer app.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sec-solved">
+        <h2 class="section-title">How we knew we solved it</h2>
+        <p>
+          The bar: publish far faster without ever compromising master data. Three metrics tracked it.
+        </p>
+        <ul class="content-list">
+          <li>
+            <strong>Time-to-Publish per Recipe (Primary KPI):</strong>
+            <span>Cut the 15&ndash;20 minute manual pass to automated parsing plus a review.</span>
+          </li>
+          <li>
+            <strong>AI Field Acceptance Rate (target &gt;80%):</strong>
+            <span>Share of AI-filled fields editors approve without rewriting.</span>
+          </li>
+          <li>
+            <strong>Storage Cost per GB:</strong>
+            <span>Hold media spend flat as high-resolution imagery scaled.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-what-i-did">
+        <h2 class="section-title">What I did</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">01</div>
+            <div class="step-body">
+              <h3>Workflow Mapping</h3>
+              <p>
+                I shadowed editors end to end. The cost wasn't typing &mdash; it was context-switching between source documents and rigid database forms.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">02</div>
+            <div class="step-body">
+              <h3>Flow &amp; UI Design</h3>
+              <p>
+                I wireframed the <strong>Split-Compose</strong> layout: source files on the left, the target schema on the right, zero tab-switching.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">03</div>
+            <div class="step-body">
+              <h3>System &amp; Data Architecture</h3>
+              <p>
+                I defined the data model, the module boundaries (catalog, media, subscriptions), and the validation rules both the AI and editors run against.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">04</div>
+            <div class="step-body">
+              <h3>Human-in-the-Loop Governance</h3>
+              <p>
+                I designed the approval gate: the AI parses, but a person is the last check before anything reaches production.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">05</div>
+            <div class="step-body">
+              <h3>Cost Scoping with Engineering</h3>
+              <p>
+                I partnered with engineering to land a Cloudflare R2 storage layer early, before high-volume media scaled.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-rich-text" id="sec-shipped">
+        <h2 class="section-title">What I shipped</h2>
+
+        <h3 class="section-subtitle">1. AI-Assisted Split-Compose</h3>
+        <p>
+          <strong>The Workspace:</strong> a two-column interface &mdash; a bulk dropzone (files up to 25MB) on the left, empty structured fields on the right, so editors see the target schema before they start.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Batch upload .png" alt="Split compose interface with dropzone on the left and structured fields on the right" />
+          <figcaption>Split Compose: raw inputs on the left, structured schema targets on the right.</figcaption>
+        </figure>
+
+        <p>
+          <strong>The Guardrail:</strong> when the AI maps text to complex taxonomies with low confidence (say, matching a step to "Grinding" or "Kneading"), the UI flags a yellow <strong>"Needs Review"</strong> for a human.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Batch process 1.png" alt="AI mapping text to master cooking techniques with needs review warning badges" />
+          <figcaption>Confidence-based mapping with human-in-the-loop review alerts.</figcaption>
+        </figure>
+
+        <p>
+          <strong>The Output:</strong> parsing populates values like preparation and cook times, and green <strong>"AI"</strong> badges mark exactly which fields the model handled.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Batch process reviewed.png" alt="Normalized recipe fields showing validated green AI badges and cook times" />
+          <figcaption>Normalized records with a clear AI verification trail.</figcaption>
+        </figure>
+
+        <p>
+          <strong>The honest part:</strong> adding a recipe is still deliberate &mdash; every field clears taxonomy validation, confidence scoring, and a human approval gate. That friction isn't a bug; it's what keeps master data clean.
+        </p>
+
+        <h3 class="section-subtitle">2. Operational Governance</h3>
+        <p>
+          <strong>Database Copilot:</strong> non-technical staff ask in plain English &mdash; <em>"How many active recipes?"</em> &mdash; and get an instant answer (<em>190</em>), with no developer-run exports.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/chatbot 2.png" alt="Chatbot interface returning MongoDB query results in natural language" />
+          <figcaption>The copilot turns conversational questions into database answers.</figcaption>
+        </figure>
+
+        <p>
+          <strong>Content Dashboard:</strong> a macro health view with a <strong>"Publish Ready %"</strong> dial and a queue of drafts needing attention, such as missing hero images.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Recipe 1 .png" alt="Recipe analytics dashboard with publish ready percentage status rings" />
+          <figcaption>Governance and operational analytics at a glance.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">3. The Media Module</h3>
+        <p>
+          <strong>One Governed Library:</strong> every cuisine, recipe, and reel pulls from a single Images module &mdash; tags, attachment target, source, and an active/draft status, managed in one place instead of scattered uploads.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/CMS IMG MOUDULE.jpeg" alt="Foodxp CMS Images module listing media with tags, attached-to target, source, and status" />
+          <figcaption>The Images module: one governed library for every asset the app renders.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">4. Subscriptions &amp; IAP</h3>
+        <p>
+          <strong>Monetization as a First-Class Module:</strong> because the consumer app runs on Premium plans, subscriptions are governed like any other master data &mdash; look up a customer by name, email, or phone, filter by plan, platform, and status, and act from one screen.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/cms iap.jpeg" alt="Foodxp CMS Subscriptions Manage Plan screen with customer, plan, status, and platform filters" />
+          <figcaption>Subscriptions module: plan, platform, and status governance in one lookup view.</figcaption>
+        </figure>
+
+        <h3 class="section-subtitle">5. System Architecture &amp; Documentation</h3>
+        <p>
+          <strong>Specs Engineers Can Build From:</strong> documentation mapping the data-normalization lifecycle, authentication, and the R2 media pipeline, so engineering executed without guesswork.
+        </p>
+        <figure class="launch-photo is-document">
+          <img src="../../img/Documentation.png" alt="Technical documentation outlining authentication, MongoDB Atlas, and S3 ImageKit setup" />
+          <figcaption>System specifications for engineering execution.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="sec-impact">
+        <h2 class="section-title">Impact</h2>
+        <ul class="impact-points">
+          <li><strong>Manual entry collapsed from 15&ndash;20 minutes to automated parsing plus review</strong> &mdash; the copy-paste drag is gone; validation stays by design.</li>
+          <li><strong>100% master-data integrity</strong> across nested schemas &mdash; no broken filters or null results on the B2C app.</li>
+          <li><strong>Media spend held flat</strong> via an optimized storage pipeline from day one.</li>
+          <li><strong>The system extends to media and subscriptions</strong> &mdash; content, assets, and monetization on one governed CMS.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-tools">
+        <h2 class="section-title">Tools and methods</h2>
+        <div class="case-chip-list">
+          <span class="chip">0&rarr;1 Product Ownership</span>
+          <span class="chip">Designed the Full Flow</span>
+          <span class="chip">System &amp; Data Architecture</span>
+          <span class="chip">Technical Logic &amp; Validation</span>
+          <span class="chip">AI + Human-in-the-Loop</span>
+          <span class="chip">Master-Data Integrity</span>
+          <span class="chip">Catalog &middot; Media &middot; IAP Modules</span>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script defer src="../../scripts/case-study.js?v=3"></script>
+</body>
+</html>
