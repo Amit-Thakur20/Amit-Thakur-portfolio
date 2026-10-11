@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JF2MZT30Q0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JF2MZT30Q0');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Foodxp App — A Recommendation System That Learns Your Taste - Amit Thakur</title>
+  <meta
+    name="description"
+    content="How Amit Thakur designed and built Foodxp end to end — a swipe-first recommendation app that answers 'what should I cook?' with a personal Taste Score, AI meal plans, a personalized Explore feed, and a living food personality."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../styles/case-study.css?v=4" />
+  <link rel="stylesheet" href="../../styles/clean.css?v=3" />
+</head>
+<body class="case-study-page">
+  <div class="case-page">
+
+    <div class="topbar">
+      <a class="back-link" href="../../index.html">
+        <span>&larr;</span>
+        <span>Back to portfolio</span>
+      </a>
+      <div class="top-actions">
+        <a class="back-link-secondary" href="../../index.html#work">View all work</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-intro">
+        <p class="eyebrow cs-fade-in">Case Study 03</p>
+        <h1 class="cs-fade-in cs-fade-in-d1">Foodxp: an app that learns your taste and ends the daily &ldquo;what should I cook?&rdquo;</h1>
+        <p class="hero-copy cs-fade-in cs-fade-in-d2">
+          Here&rsquo;s a look into the swipe, scoring, and AI-planning modules I built for the Foodxp B2C app.
+        </p>
+        <div class="hero-meta cs-fade-in cs-fade-in-d3">
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">0&rarr;1 Consumer App</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">Swipe-First Discovery</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">Recommendation &amp; Learning Loop</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-dot"></span>
+            <span class="hero-meta-value">AI Meal Planning</span>
+          </div>
+        </div>
+      </div>
+      <figure class="launch-photo hero-banner cs-fade-in cs-fade-in-d3" style="max-width:400px;margin-left:auto;margin-right:auto;">
+        <img src="../../img/Foodcp app swipe.jpeg" alt="Foodxp home deck mid-swipe: two recipe cards layered, each showing a taste match score" />
+      </figure>
+    </section>
+
+    <main class="content">
+      <section class="section" id="sec-problem">
+        <h2 class="section-title">The problem</h2>
+        <p>
+          Every day, three times a day, the same question returns: what should I cook? Breakfast, lunch, dinner &mdash; over a thousand meal decisions a year, and most recipe apps make the decision harder, not easier.
+        </p>
+        <p>
+          Search-first apps assume you already know what you want. They hand you an endless list and leave the choosing to you &mdash; then forget everything the moment you close the app.
+        </p>
+        <div class="facts">
+          <div class="fact">
+            <span>The real problem</span>
+            <strong>Users don&rsquo;t need more recipes &mdash; they need the app to decide, so they can just cook.</strong>
+          </div>
+          <div class="fact">
+            <span>No memory</span>
+            <strong>Recommendations never improve, so the app feels the same on day 100 as it did on day one.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sec-solved">
+        <h2 class="section-title">How we knew we solved it</h2>
+        <p>
+          The bar: the app should decide better every single day, and never feel like a search box. Four signals tracked it.
+        </p>
+        <ul class="content-list">
+          <li>
+            <strong>Taste Score hit rate (Primary):</strong>
+            <span>The share of recommended recipes a user accepts &mdash; the model&rsquo;s job is to climb it.</span>
+          </li>
+          <li>
+            <strong>Learning velocity:</strong>
+            <span>How fast the taste map moves. The profile showed it plainly &mdash; 89 swipes already reshaping Tangy, Savoury, Creamy, and Herby.</span>
+          </li>
+          <li>
+            <strong>Daily habit (streak + cooked):</strong>
+            <span>Proof the app answered the question well enough to bring the user back.</span>
+          </li>
+          <li>
+            <strong>Decision time:</strong>
+            <span>Open to meal chosen &mdash; the number the whole product exists to shrink.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-what-i-did">
+        <h2 class="section-title">What I did</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-no">01</div>
+            <div class="step-body">
+              <h3>Reframed the problem</h3>
+              <p>
+                Renamed it from recipe discovery to meal decision-making, three times a day. The product decides first; the user confirms.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">02</div>
+            <div class="step-body">
+              <h3>Designed the onboarding intake</h3>
+              <p>
+                A one-time capture &mdash; diet, cuisines, and time to cook &mdash; that seeds the recommendations before the first swipe.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">03</div>
+            <div class="step-body">
+              <h3>Designed the learning loop</h3>
+              <p>
+                Every pass, like, skip, and cook feeds a per-user taste model, so the app sharpens with use.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">04</div>
+            <div class="step-body">
+              <h3>Defined the Taste Score</h3>
+              <p>
+                One number on every recipe &mdash; the user-facing face of the model&rsquo;s confidence, so recommendations never feel like a black box.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-no">05</div>
+            <div class="step-body">
+              <h3>Built it end to end</h3>
+              <p>
+                Product logic, feature design, and UI/UX &mdash; designed and shipped without a handoff.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-rich-text" id="sec-shipped">
+        <h2 class="section-title">What I shipped</h2>
+
+        <div class="shot-row">
+          <div class="shot-copy">
+            <h3 class="section-subtitle">1. The Core Loop &mdash; Swipe, Like, Learn</h3>
+            <p>
+              <strong>The deck:</strong> Home greets the user with the day and a swipe-first deck &mdash; <em>&ldquo;Five fresh picks for your Friday.&rdquo;</em>
+            </p>
+            <p>
+              <strong>The card:</strong> each one carries a Taste Score badge (<em>83% your taste</em>), a meal tag (LUNCH), and the recipe&rsquo;s time and calories.
+            </p>
+            <p>
+              <strong>The signals:</strong> cards layer as the user swipes, and PASS, LIKE, and SKIP each mean something &mdash; reject, reinforce, or defer.
+            </p>
+          </div>
+          <figure class="launch-photo is-document">
+            <img src="../../img/Foodxp app Main.jpeg" alt="Foodxp home screen showing a Pizza Dough card with an 83% taste score, LUNCH tag, and pass, like, skip buttons" />
+            <figcaption>The home deck: five fresh picks, each scored to the user&rsquo;s taste.</figcaption>
+          </figure>
+        </div>
+
+        <div class="shot-row">
+          <div class="shot-copy">
+            <h3 class="section-subtitle">2. Taste Score on Every Recipe</h3>
+            <p>
+              Every recipe &mdash; on Home, Explore, or a Plan &mdash; wears its match percentage (83%, 88%, 86%, 85%). The model shows its work, so the user sees the fit before they choose.
+            </p>
+          </div>
+          <figure class="launch-photo is-document">
+            <img src="../../img/Foodcp app swipe.jpeg" alt="Foodxp card mid-swipe showing an 88% taste match for Daab Chingri over a pizza card" />
+            <figcaption>88% taste match &mdash; the score travels with every card, even mid-swipe.</figcaption>
+          </figure>
+        </div>
+
+        <div class="shot-row">
+          <div class="shot-copy">
+            <h3 class="section-subtitle">3. AI Meal Plan &mdash; &ldquo;Your week, planned&rdquo;</h3>
+            <p>
+              For each slot the AI suggests two options and the user picks one (<em>pick one &#10024;</em>), each with its own match &mdash; <em>&ldquo;A 79% match for your taste profile.&rdquo;</em>
+            </p>
+            <p>
+              User-added meals are marked <strong>&ldquo;PLANNED BY YOU&rdquo;</strong>; the rest are AI picks. The Nutrition card totals the day &mdash; <strong>&ldquo;Today&rsquo;s plan adds up to 2,364 / 2,500 kcal&rdquo;</strong> &mdash; with protein, fat, and carbs tracked.
+            </p>
+          </div>
+          <figure class="launch-photo is-document">
+            <img src="../../img/Foodxp app Meal plan.jpeg" alt="Foodxp meal plan showing a nutrition card adding up to 2,364 of 2,500 kcal, and two AI lunch options with match scores" />
+            <figcaption>The AI offers two options per slot; the nutrition card totals the day.</figcaption>
+          </figure>
+        </div>
+
+        <div class="shot-row">
+          <div class="shot-copy">
+            <h3 class="section-subtitle">4. Explore &mdash; a feed that&rsquo;s different for every user</h3>
+            <p>
+              An <strong>AI Collection</strong> article of the day, personalized to the user (<em>&ldquo;Exploring the Rich Flavors of Indian Cuisine&rdquo;</em> &rarr; <em>Read the story</em>), then taste-scored rails like <em>Quick and Easy</em> and Browse cuisines.
+            </p>
+          </div>
+          <figure class="launch-photo is-document">
+            <img src="../../img/Foodxp app Explore.jpeg" alt="Foodxp Explore screen with an AI Collection article card and taste-scored recipe rails" />
+            <figcaption>A per-user feed, topped by an AI-curated story for the day.</figcaption>
+          </figure>
+        </div>
+
+        <div class="shot-row">
+          <div class="shot-copy">
+            <h3 class="section-subtitle">5. Profile &mdash; Your Food Personality</h3>
+            <p>
+              A computed <strong>Food Style</strong> &mdash; <em>&ldquo;Balanced Mindful Eater&rdquo;</em> &mdash; with a plain-English read of what it means, and the habit in three numbers: streak, cooked, and likes taught (1 day, 13 cooked, 89 likes taught).
+            </p>
+            <p>
+              Underneath, <strong>&ldquo;Your taste map &mdash; learning from 89 swipes&rdquo;</strong> shows Tangy, Savoury, Creamy, and Herby as live scores, above the Preferences carried in from onboarding &mdash; including <em>Under 45 min</em>.
+            </p>
+          </div>
+          <figure class="launch-photo is-document">
+            <img src="../../img/Foodxp app profile.jpeg" alt="Foodxp profile showing the Balanced Mindful Eater food style, streak and cooked stats, and a taste map learning from 89 swipes" />
+            <figcaption>Food personality, habit, and a taste map that keeps learning.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="sec-impact">
+        <h2 class="section-title">Impact</h2>
+        <ul class="impact-points">
+          <li><strong>Turned &ldquo;what should I cook?&rdquo; from a search into a recommendation</strong> &mdash; the app decides first, the user confirms.</li>
+          <li><strong>Every interaction sharpens the next suggestion</strong> &mdash; one onboarding set grew into a live four-axis taste map in 89 swipes.</li>
+          <li><strong>Removed the three-times-a-day decision burden</strong> &mdash; and balanced it, with plans that also track calories and macros.</li>
+          <li><strong>Shipped end to end</strong> &mdash; product logic through UI/UX, no handoff.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="sec-tools">
+        <h2 class="section-title">Tools and methods</h2>
+        <div class="case-chip-list">
+          <span class="chip">0&rarr;1 Consumer App</span>
+          <span class="chip">Swipe-First Discovery</span>
+          <span class="chip">Recommendation System Design</span>
+          <span class="chip">Learning Loop &amp; Taste Scoring</span>
+          <span class="chip">Decision-First Onboarding</span>
+          <span class="chip">AI Content Curation</span>
+          <span class="chip">Meal-Plan &amp; Nutrition Logic</span>
+          <span class="chip">UI/UX &amp; Interaction Design</span>
+          <span class="chip">End-to-End Product Build</span>
+        </div>
+      </section>
+    </main>
+
+  </div>
+  <script defer src="../../scripts/case-study.js?v=3"></script>
+</body>
+</html>
