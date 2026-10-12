@@ -648,14 +648,24 @@ function initFloatingContact() {
 
 function initHeroLetterMotion() {
   qsa(".hero-name em").forEach((el) => {
-    const text = el.textContent;
+    const words = el.textContent.split(/(\s+)/);
     el.textContent = "";
-    Array.from(text).forEach((char, i) => {
-      const span = document.createElement("span");
-      span.className = "ch";
-      span.textContent = char;
-      span.style.animationDelay = i * 0.035 + "s";
-      el.appendChild(span);
+    let i = 0;
+    words.forEach((word) => {
+      if (/^\s+$/.test(word)) {
+        el.appendChild(document.createTextNode(word));
+        return;
+      }
+      const wrap = document.createElement("span");
+      wrap.className = "ch-word";
+      Array.from(word).forEach((char) => {
+        const span = document.createElement("span");
+        span.className = "ch";
+        span.textContent = char;
+        span.style.animationDelay = i++ * 0.035 + "s";
+        wrap.appendChild(span);
+      });
+      el.appendChild(wrap);
     });
   });
 }

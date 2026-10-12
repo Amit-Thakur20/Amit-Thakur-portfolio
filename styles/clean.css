@@ -111,7 +111,7 @@ h1, h2, h3, h4 { font-family: var(--ff-serif); font-weight: 600; letter-spacing:
   padding-top: 120px;
   padding-bottom: 90px;
 }
-#hero > .container { padding: 0 24px; max-width: 920px; }
+#hero > .container { padding: 0 24px; width: 100%; max-width: 920px; }
 #hero .hero-inner {
   display: flex;
   flex-direction: column;

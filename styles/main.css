@@ -115,7 +115,7 @@
   .nav-burger { display: none; flex-direction: column; gap: 5px; width: 28px; }
   .nav-burger span { display: block; height: 2px; background: var(--text); border-radius: 2px; }
   .nav-mobile {
-    display: none; position: fixed; inset: 0; z-index: 999; background: var(--bg0);
+    display: none; position: fixed; inset: 0; z-index: 1001; background: var(--bg0);
     flex-direction: column; align-items: center; justify-content: center; gap: 36px;
   }
   .nav-mobile.open { display: flex; }
@@ -123,6 +123,10 @@
   .nav-mobile-close { position: absolute; top: 20px; right: 24px; font-size: 28px; color: var(--muted); }
 
   /* ── Hero "simple products" letter-motion hover ────── */
+  .hero-name em .ch-word {
+    display: inline-block;
+    white-space: nowrap;
+  }
   .hero-name em .ch {
     display: inline-block;
     white-space: pre;
